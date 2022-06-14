@@ -29,12 +29,12 @@ public class TktServlet extends HttpServlet {
 		user.setQty(quantity);
 		user.setCategory(category);
 
-		ArrayList<TktUserBean> users = new ArrayList<TktUserBean>();
-		users.add(user);
-		TtkUserStorage.users.add(user);
+		TtkUserStorage userStorage = new TtkUserStorage();
+		userStorage.addUsers(user);
 
-		RequestDispatcher rd = request.getRequestDispatcher("TktServlet");
+		RequestDispatcher rd = request.getRequestDispatcher("TktSignUp.jsp");
 		rd.forward(request, response);
 
+//		response.sendRedirect("TktServlet");
 	}
 }

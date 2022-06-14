@@ -18,7 +18,7 @@
  		</select> <br><br>
  		Quantity : <input type="text" name="qty"><br><br>
  		<button type="submit" name="submit">Submit</button>
- 		<a href="TktViewAllUsers.jsp">ViewAllUsers</a>
+ 		<a href="TktViewAllUserServlet">ViewAllUsers</a>
  	</form>
 </body>
 </html>

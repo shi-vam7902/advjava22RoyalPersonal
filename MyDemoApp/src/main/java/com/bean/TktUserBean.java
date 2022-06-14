@@ -1,7 +1,7 @@
 package com.bean;
 
 public class TktUserBean {
-	int number,qty;
+	int number,qty ;
 	String name,category;
 	public int getNumber() {
 		return number;

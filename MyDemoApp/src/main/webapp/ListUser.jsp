@@ -35,6 +35,7 @@
 			<td><%=user.getFirstname()%></td>
 			<td><%=user.getEmail()%></td>
 			<td><%=user.getPassword()%></td>
+			
 			<td><a href="DeleteUserServlet?Userid=<%=user.getUserid()%>">Delete</a> |
 			<td><a href="ViewUserServlet?Userid=<%=user.getUserid()%>">View</a> </td> |
 			<td><a href ="EditUserServlet?Userid=<%=user.getUserid()%>">Edit</a></td>
