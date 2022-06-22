@@ -70,5 +70,38 @@
 		<url-pattern>/ListUserServlet</url-pattern>
 	</servlet-mapping>
 	
-	  
+	<filter>
+		<filter-name>CalculateAgeFilter</filter-name>
+		<filter-class>com.filter.CalculateAgeFilter</filter-class>
+	</filter>	  
+	
+	<filter-mapping>
+		<filter-name>CalculateAgeFilter</filter-name>
+		<url-pattern>/CalculateAgeServlet</url-pattern>
+	</filter-mapping>
+<!-- Age Filter -->
+	<filter>
+		<filter-name>CalculateYearFilter</filter-name>
+		<filter-class>com.filter.CalculateYearFilter</filter-class>
+	</filter>	  
+	
+	<filter-mapping>
+		<filter-name>CalculateYearFilter</filter-name>
+		<url-pattern>/CalculateAgeServlet</url-pattern>
+	</filter-mapping>
+	<listener>
+		<listener-class>com.listener.ServerListener</listener-class>
+	</listener>
+
+<!-- Marks Filter -->
+	<filter>
+		<filter-name>CalculateMarksFilter</filter-name>
+		<filter-class>com.filter.CalculateMarksFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>CalculateMarksFilter</filter-name>
+		<url-pattern>/AdmissionPortalServlet</url-pattern>
+	</filter-mapping>
+
 </web-app>
