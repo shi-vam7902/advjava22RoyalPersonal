@@ -9,99 +9,112 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
-  <!--SignupServlet -->
   <servlet>
-  	<servlet-name>SignupServlet</servlet-name>
-  	<servlet-class>com.controller.SignupServlet</servlet-class>
+    <servlet-name>SignupServlet</servlet-name>
+    <servlet-class>com.controller.SignupServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>SignupServlet</servlet-name>
-  <url-pattern>/SignupServlet</url-pattern>
+    <servlet-name>SignupServlet</servlet-name>
+    <url-pattern>/SignupServlet</url-pattern>
   </servlet-mapping>
-  
- <!--LoginServlet -->
   <servlet>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<servlet-class>com.controller.LoginServlet</servlet-class>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.controller.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>LoginServlet</servlet-name>
-  	<url-pattern>/LoginServlet</url-pattern>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
   </servlet-mapping>
-  
-  <!--AdditionServlet -->
   <servlet>
-  	<servlet-name>AddServlet</servlet-name>
-  	<servlet-class>com.controller.AddServlet</servlet-class>
-  	</servlet>
-	<servlet-mapping>
-		<servlet-name>AddServlet</servlet-name>
-		<url-pattern>/AddServlet</url-pattern>
-	</servlet-mapping>
-	
-	<!--RegistrationServlet -->
+    <servlet-name>AddServlet</servlet-name>
+    <servlet-class>com.controller.AddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AddServlet</servlet-name>
+    <url-pattern>/AddServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
-  	<servlet-name>RegistrationServlet</servlet-name>
-  	<servlet-class>com.controller.RegistrationServlet</servlet-class>
-  	</servlet>
-	<servlet-mapping>
-		<servlet-name>RegistrationServlet</servlet-name>
-		<url-pattern>/RegistrationServlet</url-pattern>
-	</servlet-mapping>
-	
-	<!--SubstractionServlet -->
+    <servlet-name>RegistrationServlet</servlet-name>
+    <servlet-class>com.controller.RegistrationServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistrationServlet</servlet-name>
+    <url-pattern>/RegistrationServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
-  	<servlet-name>SubstractionServlet</servlet-name>
-  	<servlet-class>com.controller.SubstractionServlet</servlet-class>
-  	</servlet>
-	<servlet-mapping>
-		<servlet-name>SubstractionServlet</servlet-name>
-		<url-pattern>/SubstractionServlet</url-pattern>
-	</servlet-mapping>
-	
-	<!--ListUserServlet -->
+    <servlet-name>SubstractionServlet</servlet-name>
+    <servlet-class>com.controller.SubstractionServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SubstractionServlet</servlet-name>
+    <url-pattern>/SubstractionServlet</url-pattern>
+  </servlet-mapping>
   <servlet>
-  	<servlet-name>ListUserServlet</servlet-name>
-  	<servlet-class>com.controller.ListUserServlet</servlet-class>
-  	</servlet>
-	<servlet-mapping>
-		<servlet-name>ListUserServlet</servlet-name>
-		<url-pattern>/ListUserServlet</url-pattern>
-	</servlet-mapping>
-	
-	<filter>
-		<filter-name>CalculateAgeFilter</filter-name>
-		<filter-class>com.filter.CalculateAgeFilter</filter-class>
-	</filter>	  
-	
-	<filter-mapping>
-		<filter-name>CalculateAgeFilter</filter-name>
-		<url-pattern>/CalculateAgeServlet</url-pattern>
-	</filter-mapping>
-<!-- Age Filter -->
-	<filter>
-		<filter-name>CalculateYearFilter</filter-name>
-		<filter-class>com.filter.CalculateYearFilter</filter-class>
-	</filter>	  
-	
-	<filter-mapping>
-		<filter-name>CalculateYearFilter</filter-name>
-		<url-pattern>/CalculateAgeServlet</url-pattern>
-	</filter-mapping>
-	<listener>
-		<listener-class>com.listener.ServerListener</listener-class>
-	</listener>
-
-<!-- Marks Filter -->
-	<filter>
-		<filter-name>CalculateMarksFilter</filter-name>
-		<filter-class>com.filter.CalculateMarksFilter</filter-class>
-	</filter>
-	
-	<filter-mapping>
-		<filter-name>CalculateMarksFilter</filter-name>
-		<url-pattern>/AdmissionPortalServlet</url-pattern>
-	</filter-mapping>
-
+    <servlet-name>ListUserServlet</servlet-name>
+    <servlet-class>com.controller.ListUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ListUserServlet</servlet-name>
+    <url-pattern>/ListUserServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <filter-name>CalculateAgeFilter</filter-name>
+    <filter-class>com.filter.CalculateAgeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CalculateAgeFilter</filter-name>
+    <url-pattern>/CalculateAgeServlet</url-pattern>
+  </filter-mapping>
+  <filter>
+    <filter-name>CalculateYearFilter</filter-name>
+    <filter-class>com.filter.CalculateYearFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CalculateYearFilter</filter-name>
+    <url-pattern>/CalculateAgeServlet</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>com.listener.ServerListener</listener-class>
+  </listener>
+  <filter>
+    <filter-name>CalculateMarksFilter</filter-name>
+    <filter-class>com.filter.CalculateMarksFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>CalculateMarksFilter</filter-name>
+    <url-pattern>/AdmissionPortalServlet</url-pattern>
+  </filter-mapping>
+  <listener>
+    <listener-class>com.listener.SessionTimeOutServlet</listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>2</session-timeout>
+  </session-config>
+  <servlet>
+    <description></description>
+    <display-name>SingleUserLoginServlet</display-name>
+    <servlet-name>SingleUserLoginServlet</servlet-name>
+    <servlet-class>com.controller.SingleUserLoginServlet</servlet-class>
+    <init-param>
+    	<param-name>email</param-name>
+    	<param-value>admin@ecom.com</param-value>
+    </init-param>
+    <init-param>
+    	<param-name>password</param-name>
+    	<param-value>admin@123</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SingleUserLoginServlet</servlet-name>
+    <url-pattern>/SingleUserLoginServlet</url-pattern>
+    </servlet-mapping>
+    
+    <jsp-config>
+    	
+    	<taglib>
+			<taglib-uri>www.royal.com/stag</taglib-uri>
+			<taglib-location>/WEB-INF/stag.tld</taglib-location>
+		</taglib>	
+   	
+   	</jsp-config>
 </web-app>
